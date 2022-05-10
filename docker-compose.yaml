@@ -1,0 +1,15 @@
+version: "3.3"
+
+services:
+
+  composerize:
+    image: alcapone1933/composerize
+    container_name: composerize
+    restart: unless-stopped
+    ports:
+      - "8200:80"
+    volumes:                        
+      - data:/var/www/
+      
+volumes:
+  data:
